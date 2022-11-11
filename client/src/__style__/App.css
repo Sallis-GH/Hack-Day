@@ -176,3 +176,25 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+.pokedex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-entry-container {
+  text-align: center;
+  text-transform: capitalize;
+  border: 2px solid;
+  background-color: rgba(199, 199, 199, 0.7);
+  padding: 1rem;
+  border: solid rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}

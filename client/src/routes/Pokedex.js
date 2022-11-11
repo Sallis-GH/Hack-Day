@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 const Pokedex = () => {
 
-  const [displayedPokemon, setDisplayedPokemon] = useState(null);
+  const [pokedexEntries, setPokedexEntries] = useState(null);
 
-  const getSearch = (text) => {
-    fetch(`/api/pokemon/${text}`)
-    .then(data => data.json())
-    .then(data => {
-      console.log(data);
-      setDisplayedPokemon({pokemonName: data?.pokemon_species?.name, pokemonImage: data.sprites.front_default, pokemonAbilities: data.abilities});
-    })
-  }
+  useEffect(() => {
+    fetch('/api/pokemon')
+      .then(data => data.json())
+      .then(data => setPokedexEntries(data))
+  }, [])
 
   return (
     <>
       <Header title={'PokéDex'} />
+          <article className='pokedex-container'>
+            {pokedexEntries?.map((pokemon, index) => <div key={index} className="pokemon-entry-container"><h3>{`${index+1}#\n ${pokemon.pokemon_species.name}`}</h3></div>)}
+          </article>
       <Footer />
     </>
   )
