@@ -1,6 +1,6 @@
 # Poke-app
 
-A one day project I did while studying at <Salt>
+A one day project I did while studying at \<Salt>
 ---
   
 ### How to run
