@@ -1,5 +1,4 @@
 import './__style__/App.css';
-import {useState, setState} from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './routes/Home';
 import Pokedex from './routes/Pokedex';

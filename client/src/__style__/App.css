@@ -3,7 +3,7 @@
 body {
   height: 100vh;
   background-color: rgba(199, 181, 181, 0.143);
-  background-image: url('/Users/salt-dev/SaltDev/Projects/Solo/Hack-Day/client/src/images/pokeball-bg.svg');
+  background-image: url("../images/pokeball-bg.svg");
   background-size: 37px;
   background-position: 6px;
 }
